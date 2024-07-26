@@ -7,14 +7,8 @@ export default {
   theme: {
     extend: {},
     screens: {
-      'sm': {'max': '790px'},
-      // => @media (max-width: 790px) { ... }
-
-      'md': '1024px',
-      // => @media (min-width: 1024px) { ... }
-
-      'lg': '1280px',
-      // => @media (min-width: 1280px) { ... }
+      'sm': {'max': '1023px'},
+   
     },
   },
   plugins: [],

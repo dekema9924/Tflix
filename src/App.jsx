@@ -1,5 +1,6 @@
 import Header from "./components/Header"
 import { Route, Routes } from "react-router-dom"
+import Movies from "./components/Movies"
 
 function App() {
 
@@ -7,9 +8,9 @@ function App() {
     <>
       <Header/>
       <Routes>
-          <Route path="/"/>
+          <Route path="/home"/>
           <Route path="/explore" />
-          <Route path="/movies"/>
+          <Route path="/movies" element={<Movies/>}/>
           <Route path="/tvshows"/>
       </Routes>
     </>
