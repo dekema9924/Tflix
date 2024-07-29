@@ -1,6 +1,9 @@
 import Header from "./components/Header"
 import { Route, Routes } from "react-router-dom"
-import Movies from "./components/Movies"
+import Home from "./components/Home/Home"
+import AllMovies from "./components/AllMovies"
+import Allshows from "./components/Allshows"
+import Details from "./components/Details"
 
 function App() {
 
@@ -8,10 +11,13 @@ function App() {
     <>
       <Header/>
       <Routes>
-          <Route path="/home"/>
+          <Route path="/" element={<Home/>}/>
           <Route path="/explore" />
-          <Route path="/movies" element={<Movies/>}/>
-          <Route path="/tvshows"/>
+          <Route path="/movies" element={<AllMovies/>} />
+          <Route path="/tvshows" element={<Allshows/>}/>
+          <Route path="/details/:id" element={<Details/>}/>
+
+
       </Routes>
     </>
   )

@@ -33,7 +33,7 @@ const Header =()=>{
                 </ul>
                 <div style={{top: !isClicked ? "-990px": "78px"}} className='w-full fixed  h-96 flex pt-20 justify-center transition  delay-200 bg-[#1e293b] '>
                     <ul className="flex flex-col gap-7 mr-10 h-8 items-center transition-all delay-300 ">
-                        <Link onClick={HandleInactive} className=' hover:border-2 hover:border-t-0 hover:border-l-0 hover:border-r-0 hover:border-blue-400' to={'/home'}>Home</Link>
+                        <Link onClick={HandleInactive} className=' hover:border-2 hover:border-t-0 hover:border-l-0 hover:border-r-0 hover:border-blue-400' to={'/'}>Home</Link>
                         <Link onClick={HandleInactive}  className=' hover:border-2 hover:border-t-0 hover:border-l-0 hover:border-r-0 hover:border-blue-400' to={'/explore'}>Explore</Link>
                         <Link onClick={HandleInactive}  className=' hover:border-2 hover:border-t-0 hover:border-l-0 hover:border-r-0 hover:border-blue-400' to={'/movies'}>Movies</Link>
                         <Link onClick={HandleInactive}  className=' hover:border-2 hover:border-t-0 hover:border-l-0 hover:border-r-0 hover:border-blue-400' to={'/tvshows'}>TvShows</Link>
@@ -41,7 +41,7 @@ const Header =()=>{
                 </div>
 
                 
-                {!isClicked ? <Box className=' sm:block'><MenuIcon onClick={HandleActive} className='cursor-pointer mr-10'/></Box> : <CloseIcon onClick={HandleInactive}  className='cursor-pointer mr-10'/>}
+                {!isClicked ? <Box className=' sm:block md:hidden'><MenuIcon onClick={HandleActive} className='cursor-pointer mr-10'/></Box> : <CloseIcon onClick={HandleInactive}  className='cursor-pointer mr-10'/>}
 
             </header>
 
