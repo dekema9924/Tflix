@@ -45,8 +45,8 @@ function Movies() {
                                     return (
 
                                         <>
-                                            <Link to={`/details/${movies.id}`}>
-                                                <div className='w-40 pt-5 overflow-hidden' key={movies.id} >
+                                            <Link to={`/details/${movies.id}`} key={movies.id}>
+                                                <div className='w-40 pt-5 overflow-hidden'>
                                                     <img className='w-40 hover:scale-105  transition-all delay-150 cursor-pointer rounded-lg hover:opacity-55 border-2 ' src={`https://image.tmdb.org/t/p/original/${movies.poster_path}`} alt="movie-cover" />
                                                     <p className='font-bold  mt-3'>{movies.title}{movies.name}</p>
                                                     <div className='flex items-center  justify-between'>

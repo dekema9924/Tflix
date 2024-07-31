@@ -34,7 +34,7 @@ function Animation() {
                                     return (
 
                                         <>
-                                            <Link to={`/details/${animated.id}`}>
+                                            <Link to={`/details/${animated.id}`} key={animated.id}>
 
                                                 <div className='w-40 pt-5 overflow-hidden' key={animated.id} >
                                                     <img className='w-40 hover:scale-105  transition-all delay-150 cursor-pointer rounded-lg hover:opacity-55 border-2 ' src={`https://image.tmdb.org/t/p/original/${animated.poster_path}`} alt="movie-cover" />

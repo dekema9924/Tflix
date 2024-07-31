@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function AllMovies() {
     const [isallmovies, setallmovies] = useState({});
     const [isLoading, setLoading] = useState(true)
-
+    const [movieName, setmovieName] = useState({})
       //fetch api
       useEffect(() => {
         const allMovies = async () => {
@@ -21,13 +21,30 @@ function AllMovies() {
     }, []);
 
 
+    const Handleform =async (e)=>{
+        e.preventDefault();
+        //post to backend
+       await axios.post('http://localhost:3000/routes/api/search',  {
+            movieName
+        })
+        .then((res)=>{
+            setallmovies(res.data)
+        })
+        
+
+    }
+    const HandleInput = (e)=>{
+        setmovieName(e.target.value)
+    }
+
+
     return (
         <>
             <div>
-                <form className='bg-[#1e293b] pb-5' action="">
+                <form onSubmit={Handleform} className='bg-[#1e293b] pb-5' action=""  method="Post">
                     <div className=' flex items-center justify-center  text-white '>
                         <SearchIcon className='relative left-10' />
-                        <input className='bg-[#5a6472] w-11/12 h-12 rounded-md pl-10 outline-none' type="text" placeholder='Search Movies' />
+                        <input onChange={HandleInput} className='bg-[#5a6472] w-11/12 h-12 rounded-md pl-10 outline-none' type="text" name='movieName' placeholder='Search Movies' />
                     </div>
                 </form>
             </div>

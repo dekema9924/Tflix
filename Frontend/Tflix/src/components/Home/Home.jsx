@@ -25,7 +25,6 @@ const Home = () => {
         setInterval(() => {
             let rnd = Images[Math.floor(Math.random(Images) * Images.length)];
             setCurrentImage(rnd)
-            console.log(rnd)
         }, 10000)
     }, [])
 

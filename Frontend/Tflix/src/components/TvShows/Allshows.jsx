@@ -8,6 +8,7 @@ function Allshows() {
 
     const [isallshows, setallshows] = useState({});
     const [isLoading, setLoading] = useState(true)
+    const [tvName, settvName] = useState({})
 
     //fetch api
     useEffect(() => {
@@ -20,13 +21,32 @@ function Allshows() {
         allShows();
 
     }, []);
+
+    const Handleform =async (e)=>{
+        e.preventDefault();
+
+        //post to backend
+       await axios.post('http://localhost:3000/routes/api/tvsearch',  {
+            tvName
+        })
+        .then((res)=>{
+           setallshows(res.data)
+           
+        })
+        
+
+    }
+    const HandleInput = (e)=>{
+        settvName(e.target.value)
+    }
+
     return (
         <>
             <div>
-                <form className='bg-[#1e293b] pb-5' action="">
+                <form onSubmit={Handleform} className='bg-[#1e293b] pb-5' action="">
                     <div className=' flex items-center justify-center  text-white '>
                         <SearchIcon className='relative left-10' />
-                        <input className='bg-[#5a6472] w-11/12 h-12 rounded-md pl-10 outline-none' type="text" placeholder='Search Movies' />
+                        <input onChange={HandleInput} className='bg-[#5a6472] w-11/12 h-12 rounded-md pl-10 outline-none' type="text" placeholder='Search Movies' name='searchShows' />
                     </div>
                 </form>
             </div>
@@ -42,7 +62,7 @@ function Allshows() {
                                     return (
 
                                         <>
-                                            <Link to={`/details/${shows.id}`}>
+                                            <Link to={`/tvdetails/${shows.id}`}>
                                                 <div className='w-40 pt-5 overflow-hidden text-black ' key={shows.id} >
                                                     <img className='w-40 hover:scale-105  transition-all delay-150 cursor-pointer rounded-lg hover:opacity-55 border-2 ' src={`https://image.tmdb.org/t/p/original/${shows.poster_path}`} alt="movie-cover" />
                                                     <p className='font-bold mt-3'>{shows.name}</p>

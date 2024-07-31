@@ -35,13 +35,13 @@ function Tv() {
                     {
                         !isLoading ? <>
                             {
-                                isTvshows.results.slice(0, 7).map((shows) => {
+                                isTvshows.results.slice(0, 7).map((shows, i) => {
                                     let vote_average = shows.vote_average.toString().slice(0, 4)
                                     return (
 
                                         <>
-                                            <Link to={`/details/${shows.id}`}>
-                                                <div className='w-40 pt-5 overflow-hidden text-white' key={shows.id} >
+                                            <Link to={`/tvdetails/${shows.id}`} key={i}>
+                                                <div className='w-40 pt-5 overflow-hidden text-white'  >
                                                     <img className='w-40 hover:scale-105  transition-all delay-150 cursor-pointer rounded-lg hover:opacity-55 border-2 ' src={`https://image.tmdb.org/t/p/original/${shows.poster_path}`} alt="movie-cover" />
                                                     <p className='font-bold  mt-3'>{shows.name}</p>
                                                     <div className='flex items-center  justify-between'>
