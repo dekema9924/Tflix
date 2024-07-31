@@ -53,7 +53,7 @@ function Allshows() {
 
             <div>
                 <p className='font-bold text-3xl  w-fit mt-3 p-4'>Discover TvShows</p>
-                <div className='flex gap-10 flex-wrap mt-5 p-4 sm:justify-around'>
+                <div className='flex sm:gap-2 gap-10 flex-wrap mt-5 p-4 sm:justify-around'>
                     {
                         !isLoading ? <>
                             {

@@ -24,9 +24,9 @@ function Movies() {
     return (
         <>
 
-            <div className='pl-10 bg-black text-white'>
+            <div className='pl-10 sm:pl-0 bg-black text-white'>
                 <div className='flex items-center justify-between  pt-10'>
-                    <div className='flex items-center '>
+                    <div className='flex items-center  '>
                         <MovieIcon className='text-yellow-700' />
                         <p className='font-bold text-2xl'>Trending Movies</p>
                     </div>
@@ -36,7 +36,7 @@ function Movies() {
                 </div>
 
 
-                <div className='flex gap-10 flex-wrap h-96 overflow-hidden  sm:justify-around'>
+                <div className='flex gap-10 sm:gap-2 flex-wrap h-96 overflow-hidden sm:justify-around'>
                     {
                         !isLoading ? <>
                             {
@@ -48,7 +48,7 @@ function Movies() {
                                             <Link to={`/details/${movies.id}`} key={movies.id}>
                                                 <div className='w-40 pt-5 overflow-hidden'>
                                                     <img className='w-40 hover:scale-105  transition-all delay-150 cursor-pointer rounded-lg hover:opacity-55 border-2 ' src={`https://image.tmdb.org/t/p/original/${movies.poster_path}`} alt="movie-cover" />
-                                                    <p className='font-bold  mt-3'>{movies.title}{movies.name}</p>
+                                                    <p className='font-bold  w-40  mt-3'>{movies.title}{movies.name}</p>
                                                     <div className='flex items-center  justify-between'>
                                                         <p>2024</p>
                                                         <p className='mr-3'>⭐️ {vote_average}</p>

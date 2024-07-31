@@ -32,7 +32,7 @@ function Tvtrailers() {
                                 return (
                                     <>
                                         <div>
-                                            <iframe allow='autoplay; encrypted-media'
+                                            <iframe  className='sm:w-80' allow='autoplay; encrypted-media'
                                                  width="453" height="280" 
                                                  frameborder="0"
                                                  allowfullscreen ng-show="showvideo"

@@ -17,7 +17,7 @@ function Animation() {
     }, [])
     return (
         <>
-            <div className=' bg-black text-white pl-10 '>
+            <div className=' bg-black sm:pl-0 text-white pl-10 '>
                 <div className='flex items-center justify-between  pt-10'>
                     <div className='flex items-center '>
                         <AnimationIcon className='text-yellow-700' />
@@ -25,7 +25,7 @@ function Animation() {
                     </div>
                 </div>
 
-                <div className='flex gap-10 flex-wrap h-96 overflow-hidden  sm:justify-around'>
+                <div className='flex gap-10 sm:gap-2 flex-wrap h-96 overflow-hidden  sm:justify-around'>
                     {
                         !isLoading ? <>
                             {

@@ -34,22 +34,12 @@ function ShowDetails() {
             <span >Go back</span>
           </button>
         </Link>
-        <div className=' flex mt-6  justify-center sm:flex-col  gap-10 items-center bg-[#1e293b] text-white p-5'
-          // style={{backgroundImage:  `url("https://image.tmdb.org/t/p/original/${isDetails.backdrop_path}")`,
-          //       backgroundPosition: 'center',
-          //       backgroundColor: '',
-          //       backgroundSize: 'cover',
-          //       backgroundRepeat: 'no-repeat',
-          //       bachgroundColor: 'gray',
-          //       opacity: '0.6'
-         
-          // }} 
-         >
+        <div className=' flex mt-6 justify-center sm:flex-col  gap-10 items-center bg-[#1e293b] text-white p-5'>
 
           <div className=''>
             <img className=' rounded-md w-72 ' src={`https://image.tmdb.org/t/p/original/${isDetails.poster_path}`} alt="poster" />
           </div>
-          <div className='flex flex-col gap-3 sm:p-10 pl-10 '>
+          <div className='flex flex-col gap-3 sm:pl-3 pl-10 sm:w-80  '>
             <h3 className='text-3xl font-bold '>{isDetails.title}</h3>
             <div className='flex h-fit gap-1'>
               {
@@ -66,10 +56,10 @@ function ShowDetails() {
             </div>
             <p className='text-inherit w-80'>{isDetails.overview}</p>
             <div className=''>
-              <p className='p-2 mb-5 text-2xl font-bold opacity-100'>Top Cast</p>
+              <p className='p-2 mb-5 text-2xl w-40 font-bold opacity-100'>Top Cast</p>
               {
                 !isLoading ? <>
-                  <div className='flex w-96 flex-wrap gap-5 h-32 overflow-hidden'>
+                  <div className='flex w-96 sm:w-72 sm:h-80 sm:justify-center flex-wrap gap-5 h-32 overflow-hidden'>
                     {
                       isCast.slice(0, 6).map((cast) => {
                         return (

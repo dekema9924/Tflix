@@ -5,6 +5,7 @@ import AllMovies from "./components/Movies/AllMovies"
 import Allshows from "./components/TvShows/Allshows"
 import Details from "./components/Movies/Details"
 import ShowDetails from "./components/TvShows/ShowDetails"
+import Explore from "./components/Explore"
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
       <Header/>
       <Routes>
           <Route path="/" element={<Home/>}/>
-          <Route path="/explore" />
+          <Route path="/explore" element={<Explore/>} />
           <Route path="/movies" element={<AllMovies/>} />
           <Route path="/tvshows" element={<Allshows/>}/>
           <Route path="/details/:id" element={<Details/>}/>
