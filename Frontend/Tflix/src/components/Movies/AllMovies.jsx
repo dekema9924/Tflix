@@ -11,7 +11,7 @@ function AllMovies() {
       //fetch api
       useEffect(() => {
         const allMovies = async () => {
-            const response = await axios.get('http://localhost:3000/routes/api/trending')
+            const response = await axios.get('https://tflixbackend.onrender.com/routes/api/trending')
             setallmovies(response.data)
             setLoading(false)
 
