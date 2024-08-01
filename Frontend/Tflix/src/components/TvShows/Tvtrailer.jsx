@@ -10,7 +10,7 @@ function Tvtrailers() {
     const { id } = useParams();
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/routes/api/tvtrailer/${id}`)
+        axios.get(`https://tflixbackend.onrender.com/routes/api/tvtrailer/${id}`)
             .then((response) => {
                 console.log(response.data.results)
                 setLoading(false)

@@ -13,7 +13,7 @@ function Allshows() {
     //fetch api
     useEffect(() => {
         const allShows = async () => {
-            const response = await axios.get('http://localhost:3000/routes/api/tvshows')
+            const response = await axios.get('https://tflixbackend.onrender.com/routes/api/tvshows')
             setallshows(response.data)
             setLoading(false)
 
@@ -26,7 +26,7 @@ function Allshows() {
         e.preventDefault();
 
         //post to backend
-       await axios.post('http://localhost:3000/routes/api/tvsearch',  {
+       await axios.post('https://tflixbackend.onrender.com/routes/api/tvsearch',  {
             tvName
         })
         .then((res)=>{

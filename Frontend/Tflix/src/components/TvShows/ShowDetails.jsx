@@ -12,7 +12,7 @@ function ShowDetails() {
   const { id } = useParams();
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/routes/api/tvdetails/${id}`)
+    axios.get(`https://tflixbackend.onrender.com/routes/api/tvdetails/${id}`)
       .then((response) => {
         setDetails(response.data)
         setCast(response.data.credits.cast)

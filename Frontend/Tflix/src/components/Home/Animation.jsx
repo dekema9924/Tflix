@@ -9,7 +9,7 @@ function Animation() {
     const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {
-        axios.get('http://localhost:3000/routes/api/animation')
+        axios.get('https://tflixbackend.onrender.com/routes/api/animation')
             .then((response) => {
                 setAnimation(response.data)
                 setLoading(false)

@@ -24,7 +24,7 @@ function AllMovies() {
     const Handleform =async (e)=>{
         e.preventDefault();
         //post to backend
-       await axios.post('http://localhost:3000/routes/api/search',  {
+       await axios.post('https://tflixbackend.onrender.com/routes/api/search',  {
             movieName
         })
         .then((res)=>{

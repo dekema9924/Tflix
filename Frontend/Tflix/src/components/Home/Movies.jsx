@@ -13,7 +13,7 @@ function Movies() {
     //fetch api
     useEffect(() => {
         const getTrending = async () => {
-            const response = await axios.get('http://localhost:3000/routes/api/trending')
+            const response = await axios.get('https://tflixbackend.onrender.com/routes/api/trending')
             setTrending(response.data)
             setLoading(false)
 

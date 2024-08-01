@@ -14,7 +14,7 @@ function Details() {
 
   useEffect(() => {
         
-      axios.get(`http://localhost:3000/routes/api/details/${id}`)
+      axios.get(`https://tflixbackend.onrender.com/routes/api/details/${id}`)
       .then((response) => {
         setDetails(response.data)
         setCast(response.data.credits.cast)

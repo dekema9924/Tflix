@@ -12,7 +12,7 @@ function Tv() {
     const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {
-        axios.get('http://localhost:3000/routes/api/tvshows')
+        axios.get('https://tflixbackend.onrender.com/routes/api/tvshows')
             .then((response) => {
                 setTvShows(response.data)
                 setLoading(false)
